@@ -48,7 +48,6 @@ struct Constants {
     struct UdacityHeaderKeys {
         static let Accept = "Accept"
         static let ContentType = "Content-Type"
-        static let XSRFToken = "X-XSRF-TOKEN"
     }
     
     struct UdacityHeaderValues {
@@ -61,8 +60,6 @@ struct Constants {
         static let Session = "session"
         static let Id = "id"
         static let User = "user"
-        static let FirstName = "first_name"
-        static let LastName = "last_name"
         static let NickName = "nickname"
     }
     

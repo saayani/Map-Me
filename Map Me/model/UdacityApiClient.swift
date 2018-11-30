@@ -67,21 +67,7 @@ class UdacityApiClient : APIClient {
     func deleteLoginSession (completionHandler: @escaping (_ success: Bool, _ error: String?) -> Void) {
         
         // Create request
-        var request = createRequest(method: .Delete,baseUrl: Constants.Udacity.APIBaseSessionURL)
-        
-        // add Cookie/Token to the request
-        var xsrfCookie: HTTPCookie? = nil
-        let sharedCookieStorage = HTTPCookieStorage.shared
-        
-        print(sharedCookieStorage.cookies as Any)
-        for cookie in sharedCookieStorage.cookies! {
-            if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie }
-            print(cookie.name, cookie.value)
-        }
-        
-        if let xsrfCookie = xsrfCookie {
-            request.setValue(xsrfCookie.value, forHTTPHeaderField: Constants.UdacityHeaderKeys.XSRFToken)
-        }
+        let request = createRequest(method: .Delete,baseUrl: Constants.Udacity.APIBaseSessionURL)
         
         // make request
         makeRequest(request: request, requestType: .Udacity) {
