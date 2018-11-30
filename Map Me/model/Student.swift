@@ -7,16 +7,23 @@
 //
 
 import Foundation
+
+// MARK: Student Struct
 struct Student {
-    var firstName: String
-    var lastName: String
-    var latitude: Double
-    var longitude: Double
-    var mapString: String
-    var mediaUrl: String
-    var uniqueKey: String
-    var objectId: String
+    var firstName = ""
+    var lastName = ""
+    var latitude = Double()
+    var longitude = Double()
+    var mapString = ""
+    var mediaUrl = ""
+    var uniqueKey = ""
+    var objectId = ""
     
+    init() {
+        return
+    }
+    
+    // Initializer
     init(studentDict: [String: AnyObject]) {
         firstName = studentDict[Constants.StudentInfo.FirstName] as! String
         lastName = studentDict[Constants.StudentInfo.LastName] as! String

@@ -7,47 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B314F3321AC1BFB00ED16A8 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F3221AC1BFB00ED16A8 /* AddLocationViewController.swift */; };
 		1B314F3621AC1EF100ED16A8 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F3521AC1EF100ED16A8 /* TextFieldDelegate.swift */; };
 		1B314F3A21AD354400ED16A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F3921AD354400ED16A8 /* Extensions.swift */; };
 		1B314F3C21AD510E00ED16A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F3B21AD510E00ED16A8 /* Constants.swift */; };
 		1B314F3E21AD60E200ED16A8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F3D21AD60E200ED16A8 /* APIClient.swift */; };
 		1B314F4121AE9DBD00ED16A8 /* UdacityApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F4021AE9DBD00ED16A8 /* UdacityApiClient.swift */; };
-		1B314F4321AEBD1300ED16A8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F4221AEBD1300ED16A8 /* TabBarController.swift */; };
 		1B314F4521AFCDAB00ED16A8 /* StudentsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F4421AFCDAB00ED16A8 /* StudentsInfo.swift */; };
 		1B314F4721AFCE0600ED16A8 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F4621AFCE0600ED16A8 /* Student.swift */; };
 		1B314F4921AFD53200ED16A8 /* ParseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F4821AFD53200ED16A8 /* ParseApiClient.swift */; };
-		1B314F4B21AFE1FE00ED16A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F4A21AFE1FE00ED16A8 /* TableViewController.swift */; };
+		1B314F5621B11FF300ED16A8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5021B11FF100ED16A8 /* TabBarController.swift */; };
+		1B314F5721B11FF300ED16A8 /* FinishAddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5121B11FF100ED16A8 /* FinishAddLocationViewController.swift */; };
+		1B314F5821B11FF300ED16A8 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5221B11FF200ED16A8 /* AddLocationViewController.swift */; };
+		1B314F5921B11FF300ED16A8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5321B11FF200ED16A8 /* MapViewController.swift */; };
+		1B314F5A21B11FF300ED16A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5421B11FF200ED16A8 /* LoginViewController.swift */; };
+		1B314F5B21B11FF300ED16A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5521B11FF300ED16A8 /* TableViewController.swift */; };
+		1B314F5F21B1598D00ED16A8 /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B314F5E21B1598D00ED16A8 /* MapDelegate.swift */; };
 		1BDE4A8C21A7249F00D4AD54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE4A8B21A7249F00D4AD54 /* AppDelegate.swift */; };
-		1BDE4A8E21A7249F00D4AD54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE4A8D21A7249F00D4AD54 /* LoginViewController.swift */; };
 		1BDE4A9121A7249F00D4AD54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE4A8F21A7249F00D4AD54 /* Main.storyboard */; };
 		1BDE4A9321A724A100D4AD54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE4A9221A724A100D4AD54 /* Assets.xcassets */; };
 		1BDE4A9621A724A100D4AD54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE4A9421A724A100D4AD54 /* LaunchScreen.storyboard */; };
-		1BDE4AA021A9AAF500D4AD54 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDE4A9F21A9AAF500D4AD54 /* MapViewController.swift */; };
 		7D4B561B6D1DE931787AE451 /* Pods_Map_Me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B80910F831554DDA22D590 /* Pods_Map_Me.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01B80910F831554DDA22D590 /* Pods_Map_Me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Map_Me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B314F3221AC1BFB00ED16A8 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		1B314F3521AC1EF100ED16A8 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		1B314F3921AD354400ED16A8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1B314F3B21AD510E00ED16A8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B314F3D21AD60E200ED16A8 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		1B314F4021AE9DBD00ED16A8 /* UdacityApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityApiClient.swift; sourceTree = "<group>"; };
-		1B314F4221AEBD1300ED16A8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1B314F4421AFCDAB00ED16A8 /* StudentsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsInfo.swift; sourceTree = "<group>"; };
 		1B314F4621AFCE0600ED16A8 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		1B314F4821AFD53200ED16A8 /* ParseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseApiClient.swift; sourceTree = "<group>"; };
-		1B314F4A21AFE1FE00ED16A8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1B314F5021B11FF100ED16A8 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1B314F5121B11FF100ED16A8 /* FinishAddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishAddLocationViewController.swift; sourceTree = "<group>"; };
+		1B314F5221B11FF200ED16A8 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		1B314F5321B11FF200ED16A8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1B314F5421B11FF200ED16A8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1B314F5521B11FF300ED16A8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1B314F5E21B1598D00ED16A8 /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		1BDE4A8821A7249F00D4AD54 /* Map Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDE4A8B21A7249F00D4AD54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BDE4A8D21A7249F00D4AD54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1BDE4A9021A7249F00D4AD54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BDE4A9221A724A100D4AD54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BDE4A9521A724A100D4AD54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BDE4A9721A724A100D4AD54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BDE4A9F21A9AAF500D4AD54 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		556C6D3B0492928E4060A6D1 /* Pods-Map Me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map Me.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Map Me/Pods-Map Me.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E57B070A50144FC574E172 /* Pods-Map Me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map Me.release.xcconfig"; path = "Pods/Target Support Files/Pods-Map Me/Pods-Map Me.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,7 @@
 				1B314F3921AD354400ED16A8 /* Extensions.swift */,
 				1B314F3B21AD510E00ED16A8 /* Constants.swift */,
 				1B314F3D21AD60E200ED16A8 /* APIClient.swift */,
+				1B314F5E21B1598D00ED16A8 /* MapDelegate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -105,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				1B314F3421AC1ED700ED16A8 /* Utils */,
-				1BDE4A9E21A9440800D4AD54 /* controller */,
+				1BDE4A9E21A9440800D4AD54 /* View Controller */,
 				1BDE4A9D21A943F400D4AD54 /* model */,
 				1BDE4A8B21A7249F00D4AD54 /* AppDelegate.swift */,
 				1BDE4A8F21A7249F00D4AD54 /* Main.storyboard */,
@@ -127,16 +132,17 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		1BDE4A9E21A9440800D4AD54 /* controller */ = {
+		1BDE4A9E21A9440800D4AD54 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1BDE4A8D21A7249F00D4AD54 /* LoginViewController.swift */,
-				1BDE4A9F21A9AAF500D4AD54 /* MapViewController.swift */,
-				1B314F3221AC1BFB00ED16A8 /* AddLocationViewController.swift */,
-				1B314F4221AEBD1300ED16A8 /* TabBarController.swift */,
-				1B314F4A21AFE1FE00ED16A8 /* TableViewController.swift */,
+				1B314F5221B11FF200ED16A8 /* AddLocationViewController.swift */,
+				1B314F5121B11FF100ED16A8 /* FinishAddLocationViewController.swift */,
+				1B314F5421B11FF200ED16A8 /* LoginViewController.swift */,
+				1B314F5321B11FF200ED16A8 /* MapViewController.swift */,
+				1B314F5021B11FF100ED16A8 /* TabBarController.swift */,
+				1B314F5521B11FF300ED16A8 /* TableViewController.swift */,
 			);
-			path = controller;
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		32652284CE0CD11EA9E4E267 /* Pods */ = {
@@ -260,16 +266,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BDE4A8E21A7249F00D4AD54 /* LoginViewController.swift in Sources */,
-				1B314F4B21AFE1FE00ED16A8 /* TableViewController.swift in Sources */,
-				1BDE4AA021A9AAF500D4AD54 /* MapViewController.swift in Sources */,
-				1B314F3321AC1BFB00ED16A8 /* AddLocationViewController.swift in Sources */,
-				1B314F4321AEBD1300ED16A8 /* TabBarController.swift in Sources */,
+				1B314F5B21B11FF300ED16A8 /* TableViewController.swift in Sources */,
+				1B314F5621B11FF300ED16A8 /* TabBarController.swift in Sources */,
+				1B314F5721B11FF300ED16A8 /* FinishAddLocationViewController.swift in Sources */,
+				1B314F5921B11FF300ED16A8 /* MapViewController.swift in Sources */,
+				1B314F5A21B11FF300ED16A8 /* LoginViewController.swift in Sources */,
+				1B314F5F21B1598D00ED16A8 /* MapDelegate.swift in Sources */,
 				1B314F4121AE9DBD00ED16A8 /* UdacityApiClient.swift in Sources */,
 				1B314F3E21AD60E200ED16A8 /* APIClient.swift in Sources */,
 				1B314F3A21AD354400ED16A8 /* Extensions.swift in Sources */,
 				1B314F4921AFD53200ED16A8 /* ParseApiClient.swift in Sources */,
 				1B314F4721AFCE0600ED16A8 /* Student.swift in Sources */,
+				1B314F5821B11FF300ED16A8 /* AddLocationViewController.swift in Sources */,
 				1B314F3621AC1EF100ED16A8 /* TextFieldDelegate.swift in Sources */,
 				1B314F4521AFCDAB00ED16A8 /* StudentsInfo.swift in Sources */,
 				1BDE4A8C21A7249F00D4AD54 /* AppDelegate.swift in Sources */,

@@ -10,18 +10,22 @@ import Foundation
 
 
 class APIClient {
+
     let session = URLSession.shared
     
     var headers: [String:String] = [String: String]()
     var scheme: String = ""
     var host: String = ""
     
+    // MARK: API Methods
     enum apiMethod: String {
         case GET
         case POST
         case Delete
         case PUT
     }
+    
+    // MARK: Request Methods
     enum requestType: String {
         case Udacity
         case Parse
@@ -55,6 +59,7 @@ class APIClient {
             request.addValue(value, forHTTPHeaderField: header)
         }
         
+        // add body to request
         if (body != nil) {
             request.httpBody = (body as! Data)
         }
@@ -62,10 +67,11 @@ class APIClient {
         return request
     }
     
+    // MARK: Make Request
     func makeRequest(request: URLRequest, requestType: requestType, completionHandler: @escaping (_ result: AnyObject?, _ error: String?) -> Void) {
         let task = session.dataTask(with: request) {
             (data, response, error) in
-            // if an error occurs, print it and re-enable the UI
+            // guard for error
             guard(error == nil) else {
                 completionHandler(nil, "Connection Error")
                 return
@@ -109,6 +115,7 @@ class APIClient {
         task.resume()
     }
     
+    // format data for udacityApi Requests
     private func getFormattedData(data: Data) -> Data {
         let range = (5..<data.count)
         return data.subdata(in: range)

@@ -216,7 +216,7 @@
                                         <color key="tintColor" red="0.0078431372550000003" green="0.70196078429999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="URL" secureTextEntry="YES" textContentType="url"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToK-cz-Eeb" userLabel="AddLocationButton">
                                         <rect key="frame" x="0.0" y="112" width="322" height="40"/>
@@ -235,6 +235,10 @@
                                     <constraint firstItem="amD-Oa-iGR" firstAttribute="height" secondItem="lgz-37-RLz" secondAttribute="height" id="N9B-Gy-cBd"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="a2D-Tp-h4i" userLabel="Activity Indicator">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46259631849999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -243,8 +247,14 @@
                             </constraint>
                             <constraint firstItem="Sjj-cj-WDu" firstAttribute="trailing" secondItem="Gq3-VK-7Fq" secondAttribute="trailing" constant="46" id="556-Pe-ToQ"/>
                             <constraint firstItem="Gq3-VK-7Fq" firstAttribute="top" secondItem="XFE-41-MFy" secondAttribute="bottom" constant="46" id="82Z-zB-cXR"/>
+                            <constraint firstAttribute="trailing" secondItem="a2D-Tp-h4i" secondAttribute="trailing" id="9h2-Vo-OQ2"/>
                             <constraint firstItem="XFE-41-MFy" firstAttribute="leading" secondItem="Sjj-cj-WDu" secondAttribute="leading" constant="16" id="BAg-LH-3sL"/>
+                            <constraint firstItem="a2D-Tp-h4i" firstAttribute="leading" secondItem="zrh-dX-6L3" secondAttribute="leading" id="Emk-Le-u06"/>
+                            <constraint firstAttribute="bottom" secondItem="a2D-Tp-h4i" secondAttribute="bottom" id="GTt-SS-gKN"/>
                             <constraint firstItem="Gq3-VK-7Fq" firstAttribute="leading" secondItem="Sjj-cj-WDu" secondAttribute="leading" constant="46" id="Jca-WC-0wa"/>
+                            <constraint firstItem="a2D-Tp-h4i" firstAttribute="centerY" secondItem="zrh-dX-6L3" secondAttribute="centerY" id="Pw3-jC-RS6"/>
+                            <constraint firstItem="a2D-Tp-h4i" firstAttribute="centerX" secondItem="zrh-dX-6L3" secondAttribute="centerX" id="c29-al-hH0"/>
+                            <constraint firstItem="a2D-Tp-h4i" firstAttribute="top" secondItem="zrh-dX-6L3" secondAttribute="top" id="cst-mn-bS6"/>
                             <constraint firstItem="Sjj-cj-WDu" firstAttribute="trailing" secondItem="XFE-41-MFy" secondAttribute="trailing" constant="16" id="e1I-bw-rhx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sjj-cj-WDu"/>
@@ -257,6 +267,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="a2D-Tp-h4i" id="gBG-9J-QU0"/>
                         <outlet property="findButton" destination="ToK-cz-Eeb" id="2yy-gf-Gra"/>
                         <outlet property="linkTextField" destination="lgz-37-RLz" id="86v-J3-QJU"/>
                         <outlet property="locationTextField" destination="amD-Oa-iGR" id="hVg-x7-RvG"/>
@@ -267,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="3043" y="1000"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish Add Location-->
         <scene sceneID="d5V-ix-jZ9">
             <objects>
-                <viewController id="Gke-yY-Z2i" sceneMemberID="viewController">
+                <viewController id="Gke-yY-Z2i" userLabel="Finish Add Location" customClass="FinishAddLocationViewController" customModule="Map_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CoP-Ie-P9V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,20 +299,38 @@
                                 <state key="normal" title="FINISH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addStudent:" destination="Gke-yY-Z2i" eventType="touchUpInside" id="h7J-yn-NPh"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="l4F-OE-GZY" userLabel="Activity Indicator">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46259631849999999" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="l4F-OE-GZY" secondAttribute="bottom" id="AJE-cL-cXf"/>
+                            <constraint firstItem="l4F-OE-GZY" firstAttribute="centerX" secondItem="CoP-Ie-P9V" secondAttribute="centerX" id="EdO-r7-Ypt"/>
                             <constraint firstAttribute="trailing" secondItem="shN-32-Sxc" secondAttribute="trailing" id="IP0-xG-HDX"/>
+                            <constraint firstItem="l4F-OE-GZY" firstAttribute="centerY" secondItem="CoP-Ie-P9V" secondAttribute="centerY" id="Tj2-BE-7yD"/>
+                            <constraint firstItem="l4F-OE-GZY" firstAttribute="leading" secondItem="CoP-Ie-P9V" secondAttribute="leading" id="TrD-UI-z1k"/>
+                            <constraint firstAttribute="trailing" secondItem="l4F-OE-GZY" secondAttribute="trailing" id="a8M-es-0cG"/>
                             <constraint firstItem="ty8-dN-36O" firstAttribute="leading" secondItem="c9g-Vt-6dL" secondAttribute="leading" constant="46" id="gBe-iQ-08q"/>
                             <constraint firstItem="shN-32-Sxc" firstAttribute="leading" secondItem="CoP-Ie-P9V" secondAttribute="leading" id="iDr-fQ-GgT"/>
                             <constraint firstItem="c9g-Vt-6dL" firstAttribute="bottom" secondItem="ty8-dN-36O" secondAttribute="bottom" constant="40" id="kLS-6A-reb"/>
                             <constraint firstItem="c9g-Vt-6dL" firstAttribute="trailing" secondItem="ty8-dN-36O" secondAttribute="trailing" constant="46" id="kRg-iF-SDI"/>
                             <constraint firstItem="shN-32-Sxc" firstAttribute="top" secondItem="c9g-Vt-6dL" secondAttribute="top" id="o5P-ZW-9X0"/>
+                            <constraint firstItem="l4F-OE-GZY" firstAttribute="top" secondItem="CoP-Ie-P9V" secondAttribute="top" id="uxB-s6-kw9"/>
                             <constraint firstItem="c9g-Vt-6dL" firstAttribute="bottom" secondItem="shN-32-Sxc" secondAttribute="bottom" id="zYF-q8-16N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c9g-Vt-6dL"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="l4F-OE-GZY" id="Ky2-qo-ahx"/>
+                        <outlet property="finishButton" destination="ty8-dN-36O" id="QNS-J1-bJZ"/>
+                        <outlet property="mapView" destination="shN-32-Sxc" id="me9-Dt-Hbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKv-9A-wCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

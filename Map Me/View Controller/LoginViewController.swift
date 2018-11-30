@@ -26,15 +26,24 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set the delegate
         emailTextField.delegate = textFieldDelegate
         passwordTextField.delegate = textFieldDelegate
+        
+        // make sure the activity indicator is hidden
         activityIndicator.stopAnimating()
+        
+        // util for keyboard
         hideKeyboardWhenTappedAround()
+        
+        // add styles to button
         loginButton.roundCorners()
     }
     
     //MARK: Login User
     @IBAction func LoginUser(_ sender: Any) {
+        // guard for empty textfields
         guard (!(emailTextField?.text?.isEmpty)! && !(passwordTextField?.text?.isEmpty)!) else {
             showAlertMessage(message: "Please enter Email and Password to login")
             return
@@ -49,9 +58,7 @@ class LoginViewController: UIViewController {
             
             // guard if login was successful
             guard success == true else {
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                }
+                self.activityIndicator.stop()
                 self.showAlertMessage(message: error!)
                 return
             }

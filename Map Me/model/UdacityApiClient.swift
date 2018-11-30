@@ -8,12 +8,16 @@
 
 import Foundation
 
+// MARK: UdacityApiClient
 class UdacityApiClient : APIClient {
     
+    // Logged in User/session Id
     var sessionId: String? = nil
     var userId: String? = nil
     
+    // shared singleton Api Instance
     static let shared = UdacityApiClient()
+    
     override init() {
         super.init()
         self.host = Constants.Udacity.APIHost
@@ -21,16 +25,22 @@ class UdacityApiClient : APIClient {
         self.headers = generateHeader()
     }
     
+    // MARK: generate headers for request
     private func generateHeader() -> Dictionary<String, String> {
         return [Constants.UdacityHeaderKeys.Accept: Constants.UdacityHeaderValues.ContentTypeJSON,
                 Constants.UdacityHeaderKeys.ContentType: Constants.UdacityHeaderValues.ContentTypeJSON]
     }
     
+    // MARK: Login User
     func createLoginSession(email: String, password: String, completionHandler: @escaping (_ success: Bool, _ error: String?) -> Void) {
+        
+        // request body
         let httpBody = "{\"udacity\": {\"username\": \"\(email)\", \"password\": \"\(password)\"}}".data(using: .utf8)
-
+        
+        // create request
         let request = createRequest(method: .POST, baseUrl: Constants.Udacity.APIBaseSessionURL, body: httpBody as AnyObject)
         
+        // make the request
         makeRequest(request: request, requestType: .Udacity) {
             (result, error) in
             
@@ -53,6 +63,7 @@ class UdacityApiClient : APIClient {
         }
     }
     
+    // MARK: Logout User
     func deleteLoginSession (completionHandler: @escaping (_ success: Bool, _ error: String?) -> Void) {
         
         // Create request
@@ -62,15 +73,17 @@ class UdacityApiClient : APIClient {
         var xsrfCookie: HTTPCookie? = nil
         let sharedCookieStorage = HTTPCookieStorage.shared
         
+        print(sharedCookieStorage.cookies as Any)
         for cookie in sharedCookieStorage.cookies! {
             if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie }
+            print(cookie.name, cookie.value)
         }
         
         if let xsrfCookie = xsrfCookie {
             request.setValue(xsrfCookie.value, forHTTPHeaderField: Constants.UdacityHeaderKeys.XSRFToken)
         }
         
-        // make request to logout user
+        // make request
         makeRequest(request: request, requestType: .Udacity) {
             (result, error) in
             
@@ -93,27 +106,29 @@ class UdacityApiClient : APIClient {
         }
     }
     
-    func getUsername(completionHandler: @escaping (_ username: String?, _ error : String?) -> Void) {
+    // MARK: get Logged in user name
+    func getUsername(completionHandler: @escaping (_ firstName: String?, _ lastName: String?, _ error : String?) -> Void) {
         // create request
         let request = createRequest(method: .GET, baseUrl: Constants.Udacity.APIBaseUserURL + "/\(self.userId!)")
         
         // make the request
         makeRequest(request: request, requestType: .Udacity) {
             (result, error) in
-            print(result as Any)
+            
             // guard if there was an error
             guard error == nil else {
-                completionHandler(nil, error)
+                completionHandler(nil, nil, error)
                 return
             }
             
             // check for the User key
-            guard let user = result![Constants.UdacityResponseKeys.User] as? [String: AnyObject], let firstName = user[Constants.UdacityResponseKeys.FirstName] as? String, let lastName = user[Constants.UdacityResponseKeys.LastName] else {
-                completionHandler(nil, "Cannot find User Info")
+            guard let user = result![Constants.UdacityResponseKeys.User] as? [String: AnyObject], let nickName = user[Constants.UdacityResponseKeys.NickName] as? String else {
+                completionHandler(nil, nil, "Cannot find User Info")
                 return
             }
             
-            completionHandler("\(firstName) \(lastName)", nil)
+            // Yay! we got your name
+            completionHandler(nickName, "", nil)
         }
     }
 }

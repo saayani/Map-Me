@@ -8,7 +8,9 @@
 
 import UIKit
 
+//MARK: Extensions
 public extension UIViewController {
+    
     // show alert message
     func showAlertMessage(message: String) {
         DispatchQueue.main.async {
@@ -42,19 +44,23 @@ public extension UIViewController {
     }
     
     // show confirmation modal
-    func showConfirmationAlert(message: String) {
+    func showConfirmationAlert(message: String, completionHandler: @escaping (_ action: UIAlertAction) -> Void) {
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "Confirm", message: message, preferredStyle: UIAlertController.Style.alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil)
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) {
+                (action: UIAlertAction) in
+                alertController.dismiss(animated: true, completion: nil)
+            }
             alertController.addAction(cancelAction)
-            let confirmAction = UIAlertAction(title: "Update Pin", style: UIAlertAction.Style.default, handler: nil)
+            let confirmAction = UIAlertAction(title: "Update Pin", style: UIAlertAction.Style.default, handler: completionHandler)
             alertController.addAction(confirmAction)
-            
+
             self.present(alertController, animated: true, completion: nil)
         }
     }
 }
 
+// MARK: Button Extension
 extension UIView {
     
     func roundCorners(radius: CGFloat = 4) {
@@ -62,4 +68,13 @@ extension UIView {
         layer.masksToBounds = true
     }
     
+}
+
+// MARK: ActivityIndicator Extension
+extension UIActivityIndicatorView {
+    func stop() {
+        DispatchQueue.main.async {
+            self.stopAnimating()
+        }
+    }
 }

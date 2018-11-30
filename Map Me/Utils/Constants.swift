@@ -7,11 +7,13 @@
 //
 
 struct Constants {
+    
     struct Parse {
         static let APIScheme = "https"
         static let APIHost = "parse.udacity.com"
         static let APIBaseURL = "/parse/classes/StudentLocation"
     }
+    
     struct ParseHeaderKeys{
         static let ApplicationId = "X-Parse-Application-Id"
         static let APIKey = "X-Parse-REST-API-Key"
@@ -61,6 +63,7 @@ struct Constants {
         static let User = "user"
         static let FirstName = "first_name"
         static let LastName = "last_name"
+        static let NickName = "nickname"
     }
     
     struct StudentInfo {
