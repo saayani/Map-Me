@@ -27,11 +27,11 @@ struct Student {
     init(studentDict: [String: AnyObject]) {
         firstName = studentDict[Constants.StudentInfo.FirstName] as? String ?? ""
         lastName = studentDict[Constants.StudentInfo.LastName] as? String ?? ""
-        latitude = studentDict[Constants.StudentInfo.Latitude] as! Double
-        longitude = studentDict[Constants.StudentInfo.Longitude] as! Double
-        mapString = studentDict[Constants.StudentInfo.MapString] as! String
+        latitude = studentDict[Constants.StudentInfo.Latitude] as? Double ?? 0.0
+        longitude = studentDict[Constants.StudentInfo.Longitude] as? Double ?? 0.0
+        mapString = studentDict[Constants.StudentInfo.MapString] as? String ?? ""
         mediaUrl = studentDict[Constants.StudentInfo.MediaUrl] as? String ?? ""
-        uniqueKey = studentDict[Constants.StudentInfo.UniqueKey] as! String
-        objectId = studentDict[Constants.StudentInfo.ObjectId] as! String
+        uniqueKey = studentDict[Constants.StudentInfo.UniqueKey] as? String ?? ""
+        objectId = studentDict[Constants.StudentInfo.ObjectId] as? String ?? ""
     }
 }
