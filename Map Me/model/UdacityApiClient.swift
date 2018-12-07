@@ -46,6 +46,7 @@ class UdacityApiClient : APIClient {
             
             // guard if there was an error
             guard error == nil else {
+                print(error!)
                 completionHandler(false, error)
                 return
             }
@@ -108,13 +109,13 @@ class UdacityApiClient : APIClient {
             }
             
             // check for the User key
-            guard let user = result![Constants.UdacityResponseKeys.User] as? [String: AnyObject], let nickName = user[Constants.UdacityResponseKeys.NickName] as? String else {
+            guard let firstName = result![Constants.UdacityResponseKeys.FirstName] as? String, let lastName = result![Constants.UdacityResponseKeys.LastName] as? String else {
                 completionHandler(nil, nil, "Cannot find User Info")
                 return
             }
             
             // Yay! we got your name
-            completionHandler(nickName, "", nil)
+            completionHandler(firstName, lastName, nil)
         }
     }
 }

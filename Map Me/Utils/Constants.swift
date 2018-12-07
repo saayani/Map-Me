@@ -39,9 +39,9 @@ struct Constants {
 
     struct Udacity {
         static let APIScheme = "https"
-        static let APIHost = "www.udacity.com"
-        static let APIBaseSessionURL = "/api/session"
-        static let APIBaseUserURL = "/api/users"
+        static let APIHost = "onthemap-api.udacity.com"
+        static let APIBaseSessionURL = "/v1/session"
+        static let APIBaseUserURL = "/v1/users"
         static let SignupURL = "https://auth.udacity.com/sign-up"
     }
     
@@ -61,6 +61,8 @@ struct Constants {
         static let Id = "id"
         static let User = "user"
         static let NickName = "nickname"
+        static let FirstName = "first_name"
+        static let LastName = "last_name"
     }
     
     struct StudentInfo {
