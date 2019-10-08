@@ -4,7 +4,7 @@ An iPhone that shows the map which contain pins showing the location where other
 
 ## Requirements
 
- * Device running macOS(MacBook or iMac) 
+ * Device running macOS (MacBook or iMac) 
  * [Xcode](https://developer.apple.com/xcode/)
  
 ## How to Run
@@ -14,12 +14,12 @@ An iPhone that shows the map which contain pins showing the location where other
   * Run the project using the `play` button on top left corner of xcode as you can see below in the screenshot.
   ![uploadImage](https://user-images.githubusercontent.com/16102594/49329631-f4311100-f5a7-11e8-9128-518fff2d269a.png)
   
-## Things Learnt
+## Things I Learnt
 
- * Accessing networked data using Apple’s URL loading framework
- * Authenticating a user using over a network connection
- * Creating user interfaces that are responsive, and communicate network activity
- * Use Core Location and the MapKit framework for to display annotated pins on a map
+ * Accessing networked data using Apple’s URL loading framework.
+ * Authenticating a user over a network connection.
+ * Creating user interfaces that are responsive, and communicate network activity.
+ * Use Core Location and the MapKit framework to display annotated pins on a map.
 
 ## ScreenShots
 <img src="https://user-images.githubusercontent.com/16102594/49329768-6a367780-f5aa-11e8-986f-67f91cc3ea82.PNG" width="45%" height="700" align="left"/>
